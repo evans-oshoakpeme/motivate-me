@@ -11,7 +11,15 @@ app.use(express.json());
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
-app.get('/api/quote', async (req, res) => {
+export default async function handler(req, res) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET");
+
+    if (req.method !== "GET") {
+        res.status(405).json({ error: "Method not allowed" });
+        return;
+    }
+
     try {
         // Request structured JSON output from the Gemini model
         const response = await ai.models.generateContent({
@@ -25,7 +33,7 @@ app.get('/api/quote', async (req, res) => {
         console.error('API Error:', error);
         res.status(500).json({ error: 'Failed to fetch a fresh quote.' });
     }
-});
+};
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("Server is running on port " + PORT));
