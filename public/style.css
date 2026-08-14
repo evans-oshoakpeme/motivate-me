@@ -63,7 +63,7 @@ p {
 .mainCard {
   display: flex;
   flex-direction: column;
-  background-color: linen;
+  background-color: #eee;
   align-items: center;
   justify-content: center;
   width: 450px;
@@ -174,7 +174,7 @@ dialog p {
     left: 0;
     width: 100vw;
     height: 50vh;
-    background: linear-gradient(limegreen, darkcyan);
+    background: #eee;
   }
 
   body {
@@ -200,10 +200,10 @@ dialog p {
   .mainCard {
     display: flex;
     flex-direction: column;
-    background-color: linen;
+    background-color: #eee;
     align-items: center;
     justify-content: center;
-    max-width: 290px;
+    max-width: 250px;
     width: 100%;
     height: 220px;
     border-radius: 12px;
@@ -252,13 +252,12 @@ dialog p {
   dialog h2 {
     margin: 0 0 8px 0;
     color: #000;
-    background-color: darkcyan;
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   dialog p {
     margin: 6px 24px;
-    color: #fff;
+    color: #000;
     font-size: 11pt;
     line-height: 1.5;
     font-style: italic;
