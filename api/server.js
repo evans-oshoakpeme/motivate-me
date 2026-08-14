@@ -34,6 +34,3 @@ export default async function handler(req, res) {
         res.status(500).json({ error: 'Failed to fetch a fresh quote.' });
     }
 };
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log("Server is running on port " + PORT));
