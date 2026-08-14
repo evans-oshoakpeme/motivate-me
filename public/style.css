@@ -175,6 +175,7 @@ dialog p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 50vh;
     background: linear-gradient(limegreen, darkcyan);
