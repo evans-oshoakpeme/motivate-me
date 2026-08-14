@@ -174,7 +174,7 @@ dialog p {
     left: 0;
     width: 100vw;
     height: 50vh;
-    background: #eee;
+    background: linear-gradient(limegreen, darkcyan);
   }
 
   body {
@@ -203,7 +203,7 @@ dialog p {
     background-color: #eee;
     align-items: center;
     justify-content: center;
-    max-width: 250px;
+    max-width: 240px;
     width: 100%;
     height: 220px;
     border-radius: 12px;
