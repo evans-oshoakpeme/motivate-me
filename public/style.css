@@ -153,7 +153,7 @@ dialog p {
     text-align: center;
     color: azure;
     cursor: pointer;
-    width: 270px;
+    width: 200px;
   }
 
   #name {
@@ -164,7 +164,7 @@ dialog p {
     border-color: darkcyan;
     border-radius: 10px;
     padding: 1rem 1rem;
-    width: 236px;
+    width: 180px;
   }
 
   .backgroundDesign {
@@ -217,7 +217,7 @@ dialog p {
     padding: 0;
     max-width: 300px;
     width: 100%;
-    background: linear-gradient(limegreen, darkcyan);
+    background: #eee;
   }
 
   dialog::backdrop {
@@ -252,7 +252,7 @@ dialog p {
   dialog h2 {
     margin: 0 0 8px 0;
     color: #000;
-    padding: 0.5rem;
+    padding: 0.25rem;
   }
 
   dialog p {
