@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivate Me</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div class="backgroundDesign">
+    <h1>Motivate Me</h1>
+    <p>A tool that generates random motivational quotes</p>
+    <div class="mainCard">
+      <label for="name">What is your name?</label>
+      <input type="text" id="name" name="name" required />
+      <button id="alertButton">Motivate Me!</button>
+    </div>
+  </div>
+
+  <dialog id="customAlert">
+    <div class="alertContent">
+      <div class="alertHeader">
+        <h2>Motivate Me says</h2>
+        <p id="copyQuote">copy</p>
+      </div>
+      <p id="alertMessage"></p>
+      <button id="closeAlert">Close</button>
+    </div>
+  </dialog>
+</body>
+</html>
