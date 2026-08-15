@@ -1,12 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 5rem;
+}
+
 #alertButton {
-  display: block;
   border: none;
-  padding: 1rem 3rem;
+  padding: 1rem;
   background-color: darkcyan;
   text-align: center;
   color: azure;
   cursor: pointer;
-  width: 333px;
+  width: 100%;
 }
 
 #alertButton:hover {
@@ -20,14 +28,11 @@
 }
 
 #name {
-  display: block;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
   border: solid 1px;
   border-color: darkcyan;
   border-radius: 10px;
-  padding: 1rem 1rem;
-  width: 300px;
+  padding: 1rem;
+  width: 92%;
 }
 
 .backgroundDesign {
@@ -35,6 +40,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
   width: 100%;
   height: 60vh;
   background: linear-gradient(limegreen, darkcyan);
@@ -57,28 +63,29 @@ h1 {
 
 p {
   font-size: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   margin-bottom: 3rem;
 }
 
 .mainCard {
-  display: flex;
-  flex-direction: column;
+  margin-top: 7rem;
+  width: 30%;
+  display: grid;
+  grid-template-rows: 1fr 3fr 3fr;
+  gap: 1rem;
   background-color: #eee;
-  align-items: center;
-  justify-content: center;
-  width: 450px;
-  height: 275px;
-  padding: 1rem 3rem;
+  align-content: center;
+  justify-items: center;
+  padding: 2rem 3rem;
   border-radius: 16px;
-  margin-left: 400px;
 }
 
 dialog {
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 0;
-  max-width: 600px;
-  width: 100%;
+  width: 40%;
   background: #eee;
 }
 
@@ -90,7 +97,7 @@ dialog::backdrop {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: darkcyan;
   color: #fff;
 }
@@ -100,6 +107,11 @@ dialog::backdrop {
   font-size: 0.9rem;
   color: #fff;
   text-decoration: underline;
+}
+
+#copyQuote:hover {
+  color: #ccc;
+  text-decoration: none;
 }
 
 .alertContent {
@@ -129,7 +141,7 @@ dialog::backdrop {
 
 dialog h2 {
   margin: 0 0 8px 0;
-  color: #000;
+  color: #1b1a1b;
   padding: 1rem;
 }
 
@@ -142,128 +154,29 @@ dialog p {
 }
 
 
-
-/*Mobile screen css*/
-@media (width <= 325px) {
-  #alertButton {
-    display: block;
-    border: none;
-    padding: 1rem 3rem;
-    background-color: darkcyan;
-    text-align: center;
-    color: azure;
-    cursor: pointer;
-    width: 270px;
-  }
-
-  #name {
-    display: block;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    border: solid 1px;
-    border-color: darkcyan;
-    border-radius: 10px;
-    padding: 1rem 1rem;
-    width: 236px;
-  }
-
-  .backgroundDesign {
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 50vh;
-    background: linear-gradient(limegreen, darkcyan);
-  }
-
-  body {
-    margin: 0;
+@media (max-width: 768px) {
+  .container {
     overflow-x: hidden;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  label {
-    font-weight: bold;
-    font-size: 12pt;
-  }
-
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 3rem;
   }
 
   .mainCard {
-    display: flex;
-    flex-direction: column;
-    background-color: #eee;
-    align-items: center;
-    justify-content: center;
-    width: 240px;
-    height: 300px;
-    border-radius: 12px;
-    padding: 1rem 2rem;
-    margin-top: 7rem;
-    margin-left: 0.5rem;
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  #name {
+    width: 89%;
   }
 
   dialog {
-    border: none;
-    border-radius: 8px;
-    padding: 0;
-    max-width: 300px;
-    width: 100%;
-    background: #eee;
-  }
-
-  dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .alertContent {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
-
-  #closeAlert {
-    align-self: flex-end;
-    padding: 8px 16px;
-    cursor: pointer;
-    background-color: darkcyan;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    margin-right: 8px;
-    margin-bottom: 6px;
-    transition: background 0.2s;
-  }
-
-  #closeAlert:hover {
-    background-color: limegreen;
-    color: #000;
-  }
-
-  dialog h2 {
-    margin: 0 0 8px 0;
-    color: #000;
-    padding: 0.25rem;
-  }
-
-  dialog p {
-    margin: 6px 24px;
-    color: #000;
-    font-size: 11pt;
-    line-height: 1.5;
-    font-style: italic;
+    width: 90%;
   }
 }
